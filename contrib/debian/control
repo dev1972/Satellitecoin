@@ -42,7 +42,7 @@ Description: peer-to-peer network based digital currency - daemon
  This package provides the daemon, stlld, and the CLI tool
  stll-cli to interact with the daemon.
 
-Package: stll-qt
+Package: STLL-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI

@@ -5243,7 +5243,7 @@ https://www.transifex.com/stll-project/stll-project-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>To use stlld, or the -server option to stll-qt, you must set an rpcpassword in the configuration file:
+        <source>To use stlld, or the -server option to STLL-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
 rpcuser=stllrpc

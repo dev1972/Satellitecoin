@@ -22,7 +22,7 @@ make
 make install # optional
 ```
 
-This will build stll-qt as well if the dependencies are met.
+This will build STLL-qt as well if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -83,7 +83,7 @@ Optional:
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build STLL-Qt, make sure that the required packages for Qt development
+If you want to build STLL-qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 5 will be used.
 To build without GUI pass `--without-gui`.
@@ -96,7 +96,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a stll-qt executable will be
+Once these are installed, they will be found by configure and a STLL-qt executable will be
 built by default.
 
 Notes

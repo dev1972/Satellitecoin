@@ -69,7 +69,7 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 1. Make sure you installed everything through homebrew mentioned above
 2. Do a proper ./configure --with-gui=qt5 --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "stll-qt" as project name, enter src/qt as location
+4. Enter "STLL-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -81,9 +81,9 @@ Creating a release build
 ------------------------
 You can ignore this section if you are building `stlld` for your own use.
 
-stlld/stll-cli binaries are not included in the stll-Qt.app bundle.
+stlld/stll-cli binaries are not included in the STLL-qt.app bundle.
 
-If you are building `stlld` or `stll-qt` for others, your build machine should be set up
+If you are building `stlld` or `STLL-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -92,7 +92,7 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see release-process.md for how the STLL-Qt.app
+Once dependencies are compiled, see release-process.md for how the STLL-qt.app
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running

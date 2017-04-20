@@ -22,10 +22,10 @@ BEGIN
             VALUE "CompanyName",        "STLL"
             VALUE "FileDescription",    "STLL Core (OSS GUI client for STLL)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "stll-qt"
+            VALUE "InternalName",       "STLL-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "stll-qt.exe"
+            VALUE "OriginalFilename",   "STLL-qt.exe"
             VALUE "ProductName",        "STLL Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

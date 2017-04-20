@@ -14,7 +14,7 @@ The implementation is dependent on the following:
 What's new
 ----------------
 
-The following new options are available for stlld and stll-qt:
+The following new options are available for stlld and STLL-qt:
  - _-keepass_ Use KeePass 2 integration using KeePassHttp plugin (default: 0)
  - _-keepassport=_ Connect to KeePassHttp on port (default: 19455)
  - _-keepasskey=_ KeePassHttp key for AES encrypted communication with KeePass
@@ -30,12 +30,12 @@ The following rpc commands are available:
 How to setup
 ----------------
 
-Sample initialization flow from _stll-qt_ console (this needs to be done only once to set up the association):
+Sample initialization flow from _STLL-qt_ console (this needs to be done only once to set up the association):
 
  - Have KeePass running with an open database
- - Start _stll-qt_
+ - Start _STLL-qt_
  - Open console
- - Type "_keepass init_" in stll-qt console
+ - Type "_keepass init_" in STLL-qt console
  - Keepass pops up and asks for an association id, fill that in, for example, "_mydrkwallet_"
  - You should get a response like this "_Association successful. Id: mydrkwalletstll - Key: AgQkcs6cI7v9tlSYKjG/+s8wJrGALHl3jLosJpPLzUE=_"
  - Edit _stll.conf_ and fill in these values
@@ -45,7 +45,7 @@ keepasskey=AgQkcs6cI7v9tlSYKjG/+s8wJrGALHl3jLosJpPLzUE=
 keepassid=mydrkwallet
 keepassname=testwallet
 ```
- - Restart _stll-qt_
+ - Restart _STLL-qt_
 
 At this point, the association is made. The next action depends on your particular situation:
 

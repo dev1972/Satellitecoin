@@ -1,5 +1,5 @@
 [Protocol]
-exec=stll-qt '%u'
+exec=STLL-qt '%u'
 protocol=stll
 input=none
 output=none

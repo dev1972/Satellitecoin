@@ -1,5 +1,5 @@
-bin_PROGRAMS += qt/test/test_stll-qt
-TESTS += qt/test/test_stll-qt
+bin_PROGRAMS += qt/test/test_STLL-qt
+TESTS += qt/test/test_STLL-qt
 
 TEST_QT_MOC_CPP = qt/test/moc_uritests.cpp
 
@@ -39,9 +39,9 @@ CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 
 CLEANFILES += $(CLEAN_BITCOIN_QT_TEST)
 
-test_stll_qt : qt/test/test_stll-qt$(EXEEXT)
+test_stll_qt : qt/test/test_STLL-qt$(EXEEXT)
 
-test_stll_qt_check : qt/test/test_stll-qt$(EXEEXT) FORCE
+test_stll_qt_check : qt/test/test_STLL-qt$(EXEEXT) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
 test_stll_qt_clean: FORCE

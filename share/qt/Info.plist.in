@@ -29,7 +29,7 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>STLL-Qt</string>
+  <string>STLL-qt</string>
 
   <key>CFBundleIdentifier</key>
   <string>io.stll.Pivx-Qt</string>

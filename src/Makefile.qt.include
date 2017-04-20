@@ -1,4 +1,4 @@
-bin_PROGRAMS += qt/stll-qt
+bin_PROGRAMS += qt/STLL-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
 # stll qt core #
@@ -324,7 +324,7 @@ RES_CSS = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/stll-qt-res.rc
+BITCOIN_RC = qt/res/STLL-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -351,7 +351,7 @@ $(qt_libbitcoinqt_a_OBJECTS) $(qt_stll_qt_OBJECTS) : | $(QT_MOC)
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# stll-qt binary #
+# STLL-qt binary #
 qt_stll_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
@@ -400,9 +400,9 @@ CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda 
 CLEANFILES += $(CLEAN_QT)
 
 stll_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_stll_qt_OBJECTS) qt/stll-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_stll_qt_OBJECTS) qt/STLL-qt$(EXEEXT) $(LIBBITCOINQT)
 
-stll_qt : qt/stll-qt$(EXEEXT)
+stll_qt : qt/STLL-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

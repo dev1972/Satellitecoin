@@ -13,16 +13,16 @@ The following are some helpful notes on how to run STLL on your native platform.
 
 Unpack the files into a directory and run:
 
-- bin/32/stll-qt (GUI, 32-bit) or bin/32/stlld (headless, 32-bit)
-- bin/64/stll-qt (GUI, 64-bit) or bin/64/stlld (headless, 64-bit)
+- bin/32/STLL-qt (GUI, 32-bit) or bin/32/stlld (headless, 32-bit)
+- bin/64/STLL-qt (GUI, 64-bit) or bin/64/stlld (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run stll-qt.exe.
+Unpack the files into a directory, and then run STLL-qt.exe.
 
 ### OSX
 
-Drag STLL-Qt to your applications folder, and then run STLL-Qt.
+Drag STLL-qt to your applications folder, and then run STLL-qt.
 
 ### Need Help?
 

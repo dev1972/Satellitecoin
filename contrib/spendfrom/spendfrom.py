@@ -7,7 +7,7 @@
 #  spendfrom.py  # Lists available funds
 #  spendfrom.py --from=ADDRESS --to=ADDRESS --amount=11.00
 #
-# Assumes it will talk to a stlld or stll-Qt running
+# Assumes it will talk to a stlld or STLL-qt running
 # on localhost.
 #
 # Depends on jsonrpc

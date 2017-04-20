@@ -1,6 +1,6 @@
-usr/local/bin/stll-qt usr/bin
+usr/local/bin/STLL-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin16.xpm usr/share/pixmaps
 share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/stll-qt.desktop usr/share/applications
-debian/stll-qt.protocol usr/share/kde4/services/
+debian/STLL-qt.desktop usr/share/applications
+debian/STLL-qt.protocol usr/share/kde4/services/
