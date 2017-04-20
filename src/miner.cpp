@@ -444,7 +444,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
     LogPrintf("STLLMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("pivx-miner");
+    RenameThread("stll-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);

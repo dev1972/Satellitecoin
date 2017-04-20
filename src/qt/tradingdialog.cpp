@@ -32,8 +32,8 @@ const QString apiCoinbasePrice = "https://www.bitstamp.net/api/ticker/";
 
 //Bittrex API
 const QString apiBittrexMarketSummary = "https://bittrex.com/api/v1.1/public/getmarketsummaries";
-const QString apiBittrexTrades = "https://bittrex.com/api/v1.1/public/getmarkethistory?market=btc-pivx";
-const QString apiBittrexOrders = "https://bittrex.com/api/v1.1/public/getorderbook?market=btc-pivx&type=both&depth=50";
+const QString apiBittrexTrades = "https://bittrex.com/api/v1.1/public/getmarkethistory?market=btc-stll";
+const QString apiBittrexOrders = "https://bittrex.com/api/v1.1/public/getorderbook?market=btc-stll&type=both&depth=50";
 
 QString dequote(QString s)
 {
@@ -228,19 +228,19 @@ QString tradingDialog::GetNonce()
 
 QString tradingDialog::GetMarketSummary()
 {
-    QString Response = sendRequest("https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-pivx");
+    QString Response = sendRequest("https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-stll");
     return dequote(Response);
 }
 
 QString tradingDialog::GetMarketHistory()
 {
-    QString Response = sendRequest("https://bittrex.com/api/v1.1/public/getmarkethistory?market=btc-pivx");
+    QString Response = sendRequest("https://bittrex.com/api/v1.1/public/getmarkethistory?market=btc-stll");
     return dequote(Response);
 }
 
 QString tradingDialog::GetOrderBook()
 {
-    QString Response = sendRequest("https://bittrex.com/api/v1.1/public/getorderbook?market=btc-pivx&type=both&depth=50");
+    QString Response = sendRequest("https://bittrex.com/api/v1.1/public/getorderbook?market=btc-stll&type=both&depth=50");
     return dequote(Response);
 }
 
@@ -264,7 +264,7 @@ QString tradingDialog::GetOpenOrders()
     URL += this->ApiKey;
     URL += "&nonce=",
         URL += tradingDialog::GetNonce(),
-        URL += "&market=btc-pivx";
+        URL += "&market=btc-stll";
 
     QString Response = sendRequest(URL);
     return dequote(Response);
@@ -279,7 +279,7 @@ QString tradingDialog::BuyPIV(QString OrderType, double Quantity, double Rate)
     URL += this->ApiKey;
     URL += "&nonce=",
         URL += tradingDialog::GetNonce(),
-        URL += "&market=btc-pivx&quantity=";
+        URL += "&market=btc-stll&quantity=";
     URL += str.number(Quantity, 'i', 8);
     URL += "&rate=";
     URL += str.number(Rate, 'i', 8);
@@ -297,7 +297,7 @@ QString tradingDialog::SellPIV(QString OrderType, double Quantity, double Rate)
     URL += this->ApiKey;
     URL += "&nonce=",
         URL += tradingDialog::GetNonce(),
-        URL += "&market=btc-pivx&quantity=";
+        URL += "&market=btc-stll&quantity=";
     URL += str.number(Quantity, 'i', 8);
     URL += "&rate=";
     URL += str.number(Rate, 'i', 8);
@@ -337,7 +337,7 @@ QString tradingDialog::GetAccountHistory()
     URL += this->ApiKey;
     URL += "&nonce=",
         URL += tradingDialog::GetNonce(),
-        URL += "&market=btc-pivx";
+        URL += "&market=btc-stll";
 
     QString Response = sendRequest(URL);
     return dequote(Response);
