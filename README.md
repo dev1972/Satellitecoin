@@ -1,4 +1,4 @@
-<h2><strong>STLL Repository (Version 2.1.7)</strong></h2>
+<h2><strong>STLL Repository (Version 1.0.0)</strong></h2>
 <p>More information at pivx.org Visit our ANN thread at bitcointalk.org/index.php?topic=1262920</p>
 <h3><strong>Coin specs:</strong></h3>
 <p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
