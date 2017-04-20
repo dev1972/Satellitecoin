@@ -1,5 +1,5 @@
 <h2><strong>STLL V. 1.0.0.0</strong></h2>
-<p>More information at stll.org Visit our ANN thread at bitcointalk.org/index.php?topic=1262920</p>
+<p></p>
 <h3><strong>Coin specs:</strong></h3>
 <p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
 <ul>
