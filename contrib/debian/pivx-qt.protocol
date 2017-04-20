@@ -1,6 +1,6 @@
 [Protocol]
-exec=stll-qt '%u'
-protocol=stll
+exec=pivx-qt '%u'
+protocol=pivx
 input=none
 output=none
 helper=true

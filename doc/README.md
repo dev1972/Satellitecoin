@@ -3,7 +3,7 @@ STLL Core
 
 Setup
 ---------------------
-[STLL Core](http://stll.org/wallet) is the original STLL client and it builds the backbone of the network. However, it downloads and stores the entire history of STLL transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[STLL Core](http://pivx.org/wallet) is the original STLL client and it builds the backbone of the network. However, it downloads and stores the entire history of STLL transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -13,12 +13,12 @@ The following are some helpful notes on how to run STLL on your native platform.
 
 Unpack the files into a directory and run:
 
-- bin/32/stll-qt (GUI, 32-bit) or bin/32/stlld (headless, 32-bit)
-- bin/64/stll-qt (GUI, 64-bit) or bin/64/stlld (headless, 64-bit)
+- bin/32/pivx-qt (GUI, 32-bit) or bin/32/pivxd (headless, 32-bit)
+- bin/64/pivx-qt (GUI, 64-bit) or bin/64/pivxd (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run stll-qt.exe.
+Unpack the files into a directory, and then run pivx-qt.exe.
 
 ### OSX
 
@@ -28,8 +28,8 @@ Drag STLL-Qt to your applications folder, and then run STLL-Qt.
 
 * See the documentation at the [STLL Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [STLL Forum](http://forum.stll.org/).
-* Join one of our Slack groups [STLL Slack Groups](https://stll.org/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [STLL Forum](http://forum.pivx.org/).
+* Join one of our Slack groups [STLL Slack Groups](https://pivx.org/slack-logins/).
 
 Building
 ---------------------
@@ -55,8 +55,8 @@ The Pivx repo's [root README](https://github.com/dev1972/Satellitecoin/blob/mast
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [STLL](http://forum.stll.org/) forum.
-* Join the [STLL-Dev](https://stll-dev.slack.com/) Slack group ([Sign-Up](https://stll-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [STLL](http://forum.pivx.org/) forum.
+* Join the [STLL-Dev](https://pivx-dev.slack.com/) Slack group ([Sign-Up](https://pivx-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

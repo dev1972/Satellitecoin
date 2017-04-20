@@ -7,12 +7,12 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/stll
-src/stlld
-src/stll-cli
-src/stll-tx
-src/test/test_stll
-src/qt/test/test_stll-qt
+src/pivx
+src/pivxd
+src/pivx-cli
+src/pivx-tx
+src/test/test_pivx
+src/qt/test/test_pivx-qt
 
 # autoreconf
 Makefile.in
@@ -35,8 +35,8 @@ config.log
 config.status
 configure
 libtool
-src/config/stll-config.h
-src/config/stll-config.h.in
+src/config/pivx-config.h
+src/config/pivx-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -61,7 +61,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.stll
+.pivx
 *.a
 *.pb.cc
 *.pb.h
@@ -80,12 +80,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-stll-qt
+pivx-qt
 STLL-Qt.app
 
 # Unit-tests
 Makefile.test
-stll-qt_test
+pivx-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -101,7 +101,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_stll.coverage/
+test_pivx.coverage/
 total.coverage/
 coverage_percent.txt
 

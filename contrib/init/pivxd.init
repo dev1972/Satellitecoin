@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  stlld The STLL core server.
+#  pivxd The STLL core server.
 #
 #
 # chkconfig: 345 80 20
-# description: stlld
-# processname: stlld
+# description: pivxd
+# processname: pivxd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/stlld, see below
-if [ -f /etc/sysconfig/stlld ]; then
-        . /etc/sysconfig/stlld
+# you can override defaults in /etc/sysconfig/pivxd, see below
+if [ -f /etc/sysconfig/pivxd ]; then
+        . /etc/sysconfig/pivxd
 fi
 
 RETVAL=0
 
-prog=stlld
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/stlld
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/stlld}
+prog=pivxd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/pivxd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/pivxd}
 
-# stlld defaults to /usr/bin/stlld, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/stlld}
+# pivxd defaults to /usr/bin/pivxd, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/pivxd}
 
-# stlld opts default to -disablewallet, override with BITCOIND_OPTS
+# pivxd opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {

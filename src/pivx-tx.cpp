@@ -46,10 +46,10 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Pivx Core stll-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Pivx Core pivx-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
-                               "  stll-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded stll transaction") + "\n" +
-                               "  stll-tx [options] -create [commands]   " + _("Create hex-encoded stll transaction") + "\n" +
+                               "  pivx-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded pivx transaction") + "\n" +
+                               "  pivx-tx [options] -create [commands]   " + _("Create hex-encoded pivx transaction") + "\n" +
                                "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -553,7 +553,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw runtime_error("too few parameters");
 
-            // param: hex-encoded stll transaction
+            // param: hex-encoded pivx transaction
             string strHexTx(argv[1]);
             if (strHexTx == "-") // "-" implies standard input
                 strHexTx = readStdin();

@@ -1,2 +1,2 @@
-usr/local/bin/stlld usr/bin
-usr/local/bin/stll-cli usr/bin
+usr/local/bin/pivxd usr/bin
+usr/local/bin/pivx-cli usr/bin

@@ -78,7 +78,7 @@ HEADERS += src/activemasternode.h \
            src/crypter.h \
            src/obfuscation-relay.h \
            src/obfuscation.h \
-           src/stll-config.h \
+           src/pivx-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/activemasternode.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/stll-config.h \
+           src/config/pivx-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -333,7 +333,7 @@ HEADERS += src/activemasternode.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/stll.moc \
+           src/qt/pivx.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -374,9 +374,9 @@ SOURCES += src/activemasternode.cpp \
            src/crypter.cpp \
            src/obfuscation-relay.cpp \
            src/obfuscation.cpp \
-           src/stll-cli.cpp \
-           src/stll-tx.cpp \
-           src/stll.cpp \
+           src/pivx-cli.cpp \
+           src/pivx-tx.cpp \
+           src/pivx.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -471,8 +471,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/obfuscationconfig.cpp \
-           src/qt/stll.cpp \
-           src/qt/stllstrings.cpp \
+           src/qt/pivx.cpp \
+           src/qt/pivxstrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -550,7 +550,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_stll.cpp \
+           src/test/test_pivx.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -641,21 +641,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/stll.qrc src/qt/stll_locale.qrc
+RESOURCES += src/qt/pivx.qrc src/qt/pivx_locale.qrc
 
-TRANSLATIONS += src/qt/locale/stll_bg.ts \
-                src/qt/locale/stll_de.ts \
-                src/qt/locale/stll_en.ts \
-                src/qt/locale/stll_es.ts \
-                src/qt/locale/stll_fi.ts \
-                src/qt/locale/stll_fr.ts \
-                src/qt/locale/stll_it.ts \
-                src/qt/locale/stll_ja.ts \
-                src/qt/locale/stll_pl.ts \
-                src/qt/locale/stll_pt.ts \
-                src/qt/locale/stll_ru.ts \
-                src/qt/locale/stll_sk.ts \
-                src/qt/locale/stll_sv.ts \
-                src/qt/locale/stll_vi.ts \
-                src/qt/locale/stll_zh_CN.ts \
-                src/qt/locale/stll_zh_TW.ts
+TRANSLATIONS += src/qt/locale/pivx_bg.ts \
+                src/qt/locale/pivx_de.ts \
+                src/qt/locale/pivx_en.ts \
+                src/qt/locale/pivx_es.ts \
+                src/qt/locale/pivx_fi.ts \
+                src/qt/locale/pivx_fr.ts \
+                src/qt/locale/pivx_it.ts \
+                src/qt/locale/pivx_ja.ts \
+                src/qt/locale/pivx_pl.ts \
+                src/qt/locale/pivx_pt.ts \
+                src/qt/locale/pivx_ru.ts \
+                src/qt/locale/pivx_sk.ts \
+                src/qt/locale/pivx_sv.ts \
+                src/qt/locale/pivx_vi.ts \
+                src/qt/locale/pivx_zh_CN.ts \
+                src/qt/locale/pivx_zh_TW.ts

@@ -47,7 +47,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "STLL"
-#define QAPP_ORG_DOMAIN "stll.org"
+#define QAPP_ORG_DOMAIN "pivx.org"
 #define QAPP_APP_NAME_DEFAULT "STLL-Qt"
 #define QAPP_APP_NAME_TESTNET "STLL-Qt-testnet"
 

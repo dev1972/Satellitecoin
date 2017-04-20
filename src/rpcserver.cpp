@@ -300,15 +300,15 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* Pivx features */
-        {"stll", "masternode", &masternode, true, true, false},
-        {"stll", "masternodelist", &masternodelist, true, true, false},
-        {"stll", "mnbudget", &mnbudget, true, true, false},
-        {"stll", "mnbudgetvoteraw", &mnbudgetvoteraw, true, true, false},
-        {"stll", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"stll", "mnsync", &mnsync, true, true, false},
-        {"stll", "spork", &spork, true, true, false},
+        {"pivx", "masternode", &masternode, true, true, false},
+        {"pivx", "masternodelist", &masternodelist, true, true, false},
+        {"pivx", "mnbudget", &mnbudget, true, true, false},
+        {"pivx", "mnbudgetvoteraw", &mnbudgetvoteraw, true, true, false},
+        {"pivx", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"pivx", "mnsync", &mnsync, true, true, false},
+        {"pivx", "spork", &spork, true, true, false},
 #ifdef ENABLE_WALLET
-        {"stll", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"pivx", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -573,10 +573,10 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use stlld, or the -server option to stll-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use pivxd, or the -server option to pivx-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=stllrpc\n"
+                                               "rpcuser=pivxrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
@@ -1022,7 +1022,7 @@ json_spirit::Value CRPCTable::execute(const std::string& strMethod, const json_s
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> stll-cli " + methodname + " " + args + "\n";
+    return "> pivx-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
