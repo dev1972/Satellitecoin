@@ -41,7 +41,7 @@ The following are developer notes on how to build PIVX on your native platform. 
 
 Development
 ---------------------
-The Pivx repo's [root README](https://github.com/dev1972/Satellitecoinblob/master/README.md) contains relevant information on the development process and automated testing.
+The Pivx repo's [root README](https://github.com/dev1972/Satellitecoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
