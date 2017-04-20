@@ -150,7 +150,7 @@ extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 extern CBlockIndex* pindexBestHeader;
 
 /** Minimum disk space required - used in CheckDiskSpace() */
-static const uint64_t nMinDiskSpace = 52428800;
+static const uint64_t nMinDiskSpace = 15120000;
 
 /** Register a wallet to receive updates from core */
 void RegisterValidationInterface(CValidationInterface* pwalletIn);

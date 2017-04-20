@@ -1615,9 +1615,9 @@ int64_t GetBlockValue(int nHeight)
     }
 
     if (nHeight == 0) {
-        nSubsidy = 25000 * COIN;
+        nSubsidy = 17000 * COIN;
     } else if (nHeight < 1500 && nHeight > 0) {
-        nSubsidy = 100 * COIN;
+        nSubsidy = 150 * COIN;
     } else if (nHeight < 3000 && nHeight >= 1500) {
         nSubsidy = 75 * COIN;
     } else if (nHeight < 9000 && nHeight >= 3000) {
@@ -1627,7 +1627,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight < 75000 && nHeight >= 15000) {
         nSubsidy = 15 * COIN;    
     } else if (nHeight < 150000 && nHeight >= 75000) {
-        nSubsidy = 15 * COIN;
+        nSubsidy = 10 * COIN;
     } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 150000) {
         nSubsidy = 12.5 * COIN;
     } else if (nHeight <= 300000 && nHeight > Params().LAST_POW_BLOCK()) {
