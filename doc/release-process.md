@@ -29,7 +29,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/pivx-project/pivx.git
 
-### PIVX maintainers/release engineers, suggestion for writing release notes
+### STLL maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -97,7 +97,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign PIVX Core for Linux, Windows, and OS X:
+### Build and sign STLL Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
     ./bin/gbuild --memory 3000 --commit pivx=v${VERSION} ../pivx/contrib/gitian-descriptors/gitian-linux.yml
@@ -184,7 +184,7 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [pivx-detached-sigs](https://github.com/PIVX-Project/pivx-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [pivx-detached-sigs](https://github.com/STLL-Project/pivx-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 

@@ -81,7 +81,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 pivx-qt
-PIVX-Qt.app
+STLL-Qt.app
 
 # Unit-tests
 Makefile.test

@@ -1,13 +1,13 @@
-PIVX Core
+STLL Core
 =====================
 
 Setup
 ---------------------
-[PIVX Core](http://pivx.org/wallet) is the original PIVX client and it builds the backbone of the network. However, it downloads and stores the entire history of PIVX transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[STLL Core](http://pivx.org/wallet) is the original STLL client and it builds the backbone of the network. However, it downloads and stores the entire history of STLL transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run PIVX on your native platform.
+The following are some helpful notes on how to run STLL on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run pivx-qt.exe.
 
 ### OSX
 
-Drag PIVX-Qt to your applications folder, and then run PIVX-Qt.
+Drag STLL-Qt to your applications folder, and then run STLL-Qt.
 
 ### Need Help?
 
-* See the documentation at the [PIVX Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [STLL Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [PIVX Forum](http://forum.pivx.org/).
-* Join one of our Slack groups [PIVX Slack Groups](https://pivx.org/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [STLL Forum](http://forum.pivx.org/).
+* Join one of our Slack groups [STLL Slack Groups](https://pivx.org/slack-logins/).
 
 Building
 ---------------------
-The following are developer notes on how to build PIVX on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build STLL on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -55,8 +55,8 @@ The Pivx repo's [root README](https://github.com/dev1972/Satellitecoin/blob/mast
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [PIVX](http://forum.pivx.org/) forum.
-* Join the [PIVX-Dev](https://pivx-dev.slack.com/) Slack group ([Sign-Up](https://pivx-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [STLL](http://forum.pivx.org/) forum.
+* Join the [STLL-Dev](https://pivx-dev.slack.com/) Slack group ([Sign-Up](https://pivx-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
