@@ -65,7 +65,7 @@ tradingDialog::tradingDialog(QWidget* parent) : QDialog(parent),
 
     ui->BuyCostLabel->setPalette(sample_palette);
     ui->SellCostLabel->setPalette(sample_palette);
-    ui->PIVAvailableLabel->setPalette(sample_palette);
+    ui->STLLAvailableLabel->setPalette(sample_palette);
     ui->BtcAvailableLbl_2->setPalette(sample_palette);
     //Set tabs to inactive
     ui->TradingTabWidget->setTabEnabled(2, false);
@@ -76,10 +76,10 @@ tradingDialog::tradingDialog(QWidget* parent) : QDialog(parent),
 
     /*OrderBook Table Init*/
     CreateOrderBookTables(*ui->BidsTable, QStringList() << "Total(BTC)"
-                                                        << "PIV(SIZE)"
+                                                        << "STLL(SIZE)"
                                                         << "Bid(BTC)");
     CreateOrderBookTables(*ui->AsksTable, QStringList() << "Ask(BTC)"
-                                                        << "PIV(SIZE)"
+                                                        << "STLL(SIZE)"
                                                         << "Total(BTC)");
     /*OrderBook Table Init*/
 
@@ -90,7 +90,7 @@ tradingDialog::tradingDialog(QWidget* parent) : QDialog(parent),
     ui->MarketHistoryTable->setHorizontalHeaderLabels(QStringList() << "Date"
                                                                     << "Buy/Sell"
                                                                     << "Bid/Ask"
-                                                                    << "Total units(PIV)"
+                                                                    << "Total units(STLL)"
                                                                     << "Total cost(BTC");
     ui->MarketHistoryTable->setRowCount(0);
 
@@ -270,7 +270,7 @@ QString tradingDialog::GetOpenOrders()
     return dequote(Response);
 }
 
-QString tradingDialog::BuyPIV(QString OrderType, double Quantity, double Rate)
+QString tradingDialog::BuySTLL(QString OrderType, double Quantity, double Rate)
 {
     QString str = "";
     QString URL = "https://bittrex.com/api/v1.1/market/";
@@ -288,7 +288,7 @@ QString tradingDialog::BuyPIV(QString OrderType, double Quantity, double Rate)
     return dequote(Response);
 }
 
-QString tradingDialog::SellPIV(QString OrderType, double Quantity, double Rate)
+QString tradingDialog::SellSTLL(QString OrderType, double Quantity, double Rate)
 {
     QString str = "";
     QString URL = "https://bittrex.com/api/v1.1/market/";
@@ -325,7 +325,7 @@ QString tradingDialog::GetDepositAddress()
     URL += this->ApiKey;
     URL += "&nonce=",
         URL += tradingDialog::GetNonce(),
-        URL += "&currency=PIV";
+        URL += "&currency=STLL";
 
     QString Response = sendRequest(URL);
     return dequote(Response);
@@ -362,7 +362,7 @@ int tradingDialog::SetExchangeInfoTextLabels()
 
     ui->Bid->setText("<b>Bid:</b> <span style='font-weight:bold; font-size:11px; color:Green;'>" + str.number(obj["Bid"].toDouble(), 'i', 8) + "</span> BTC");
 
-    ui->volumet->setText("<b>PIV Volume:</b> <span style='font-weight:bold; font-size:11px; color:blue;'>" + str.number(obj["Volume"].toDouble(), 'i', 8) + "</span> PIV");
+    ui->volumet->setText("<b>STLL Volume:</b> <span style='font-weight:bold; font-size:11px; color:blue;'>" + str.number(obj["Volume"].toDouble(), 'i', 8) + "</span> STLL");
 
     ui->volumebtc->setText("<b>BTC Volume:</b> <span style='font-weight:bold; font-size:11px; color:blue;'>" + str.number(obj["BaseVolume"].toDouble(), 'i', 8) + "</span> BTC");
 
@@ -535,8 +535,8 @@ void tradingDialog::ParseAndPopulateOrderBookTables(QString OrderBook)
     QJsonArray BuyArray = ResultObject.value("buy").toArray();   //get buy/sell object from result object
     QJsonArray SellArray = ResultObject.value("sell").toArray(); //get buy/sell object from result object
 
-    double PIVSupply = 0;
-    double PIVDemand = 0;
+    double STLLSupply = 0;
+    double STLLDemand = 0;
     double BtcSupply = 0;
     double BtcDemand = 0;
 
@@ -549,7 +549,7 @@ void tradingDialog::ParseAndPopulateOrderBookTables(QString OrderBook)
         double y = obj["Quantity"].toDouble();
         double a = (x * y);
 
-        PIVSupply = PIVSupply + y;
+        STLLSupply = STLLSupply + y;
         BtcSupply = BtcSupply + a;
 
         AskRows = ui->AsksTable->rowCount();
@@ -570,7 +570,7 @@ void tradingDialog::ParseAndPopulateOrderBookTables(QString OrderBook)
         double y = obj["Quantity"].toDouble();
         double a = (x * y);
 
-        PIVDemand = PIVDemand + y;
+        STLLDemand = STLLDemand + y;
         BtcDemand = BtcDemand + a;
 
         BidRows = ui->BidsTable->rowCount();
@@ -581,12 +581,12 @@ void tradingDialog::ParseAndPopulateOrderBookTables(QString OrderBook)
         BuyItteration++;
     }
 
-    ui->PIVSupply->setText("<b>Supply:</b> <span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(PIVSupply, 'i', 8) + "</span><b> PIV</b>");
+    ui->STLLSupply->setText("<b>Supply:</b> <span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(STLLSupply, 'i', 8) + "</span><b> STLL</b>");
     ui->BtcSupply->setText("<span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(BtcSupply, 'i', 8) + "</span><b> BTC</b>");
     ui->AsksCount->setText("<b>#Asks :</b> <span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(ui->AsksTable->rowCount()) + "</span>");
 
 
-    ui->PIVDemand->setText("<b>Demand:</b> <span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(PIVDemand, 'i', 8) + "</span><b> PIV</b>");
+    ui->STLLDemand->setText("<b>Demand:</b> <span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(STLLDemand, 'i', 8) + "</span><b> STLL</b>");
     ui->BtcDemand->setText("<span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(BtcDemand, 'i', 8) + "</span><b> BTC</b>");
     ui->BidsCount->setText("<b>#Bids :</b> <span style='font-weight:bold; font-size:11px; color:blue'>" + str.number(ui->BidsTable->rowCount()) + "</span>");
     obj.empty();
@@ -669,11 +669,11 @@ void tradingDialog::ActionsOnSwitch(int index = -1)
     case 5: // Sell tab is active
         Response = GetMarketSummary();
         if (Response.size() > 0 && Response != "Error") {
-            QString balance = GetBalance("PIV");
+            QString balance = GetBalance("STLL");
             QString str;
             QJsonObject ResultObject = GetResultObjectFromJSONObject(balance);
 
-            ui->PIVAvailableLabel->setText(str.number(ResultObject["Available"].toDouble(), 'i', 8));
+            ui->STLLAvailableLabel->setText(str.number(ResultObject["Available"].toDouble(), 'i', 8));
         }
         break;
 
@@ -683,10 +683,10 @@ void tradingDialog::ActionsOnSwitch(int index = -1)
             DisplayBalance(*ui->BitcoinBalanceLabel, *ui->BitcoinAvailableLabel, *ui->BitcoinPendingLabel, QString::fromUtf8("BTC"), Response);
         }
 
-        Response = GetBalance("PIV");
+        Response = GetBalance("STLL");
 
         if (Response.size() > 0 && Response != "Error") {
-            DisplayBalance(*ui->PIVBalanceLabel, *ui->PIVAvailableLabel, *ui->PIVPendingLabel, QString::fromUtf8("PIV"), Response);
+            DisplayBalance(*ui->STLLBalanceLabel, *ui->STLLAvailableLabel, *ui->STLLPendingLabel, QString::fromUtf8("STLL"), Response);
         }
         break;
 
@@ -786,7 +786,7 @@ void tradingDialog::CalculateBuyCostLabel()
 void tradingDialog::CalculateSellCostLabel()
 {
     double price = ui->SellBidPriceEdit->text().toDouble();
-    double Quantity = ui->UnitsInputPIV->text().toDouble();
+    double Quantity = ui->UnitsInputSTLL->text().toDouble();
     double cost = ((price * Quantity) - ((price * Quantity / 100) * 0.25));
 
     QString Str = "";
@@ -797,7 +797,7 @@ void tradingDialog::on_UpdateKeys_clicked()
 {
     this->ApiKey = ui->ApiKeyInput->text();
     this->SecretKey = ui->SecretKeyInput->text();
-    this->Currency = "PIV";
+    this->Currency = "STLL";
 
 
     QJsonDocument jsonResponse = QJsonDocument::fromJson(GetBalance(this->Currency).toUtf8()); //get json from str.
@@ -830,14 +830,14 @@ void tradingDialog::on_GenDepositBTN_clicked()
 
 void tradingDialog::on_Sell_Max_Amount_clicked()
 {
-    //calculate amount of BTC that can be gained from selling PIV available balance
-    QString responseA = GetBalance("PIV");
+    //calculate amount of BTC that can be gained from selling STLL available balance
+    QString responseA = GetBalance("STLL");
     QString str;
     QJsonObject ResultObject = GetResultObjectFromJSONObject(responseA);
 
-    double AvailablePIV = ResultObject["Available"].toDouble();
+    double AvailableSTLL = ResultObject["Available"].toDouble();
 
-    ui->UnitsInputPIV->setText(str.number(AvailablePIV, 'i', 8));
+    ui->UnitsInputSTLL->setText(str.number(AvailableSTLL, 'i', 8));
 }
 
 void tradingDialog::on_Buy_Max_Amount_clicked()
@@ -962,7 +962,7 @@ void tradingDialog::on_BuyBidcomboBox_currentIndexChanged(const QString& arg1)
     CalculateBuyCostLabel(); //update cost
 }
 
-void tradingDialog::on_BuyPIV_clicked()
+void tradingDialog::on_BuySTLL_clicked()
 {
     double Rate;
     double Quantity;
@@ -981,7 +981,7 @@ void tradingDialog::on_BuyPIV_clicked()
 
     QString Msg = "Are you sure you want to buy ";
     Msg += ui->UnitsInput->text();
-    Msg += "PIV @ ";
+    Msg += "STLL @ ";
     Msg += ui->BuyBidPriceEdit->text();
     Msg += " BTC Each";
 
@@ -989,7 +989,7 @@ void tradingDialog::on_BuyPIV_clicked()
     reply = QMessageBox::question(this, "Buy Order", Msg, QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
-        QString Response = BuyPIV(Order, Quantity, Rate);
+        QString Response = BuySTLL(Order, Quantity, Rate);
 
         QJsonDocument jsonResponse = QJsonDocument::fromJson(Response.toUtf8()); //get json from str.
         QJsonObject ResponseObject = jsonResponse.object();                      //get json obj
@@ -1005,13 +1005,13 @@ void tradingDialog::on_BuyPIV_clicked()
     }
 }
 
-void tradingDialog::on_SellPIVBTN_clicked()
+void tradingDialog::on_SellSTLLBTN_clicked()
 {
     double Rate;
     double Quantity;
 
     Rate = ui->SellBidPriceEdit->text().toDouble();
-    Quantity = ui->UnitsInputPIV->text().toDouble();
+    Quantity = ui->UnitsInputSTLL->text().toDouble();
 
     QString OrderType = ui->SellOrdertypeCombo->currentText();
     QString Order;
@@ -1023,8 +1023,8 @@ void tradingDialog::on_SellPIVBTN_clicked()
     }
 
     QString Msg = "Are you sure you want to Sell ";
-    Msg += ui->UnitsInputPIV->text();
-    Msg += " PIV @ ";
+    Msg += ui->UnitsInputSTLL->text();
+    Msg += " STLL @ ";
     Msg += ui->SellBidPriceEdit->text();
     Msg += " BTC Each";
 
@@ -1032,7 +1032,7 @@ void tradingDialog::on_SellPIVBTN_clicked()
     reply = QMessageBox::question(this, "Sell Order", Msg, QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
-        QString Response = SellPIV(Order, Quantity, Rate);
+        QString Response = SellSTLL(Order, Quantity, Rate);
         QJsonDocument jsonResponse = QJsonDocument::fromJson(Response.toUtf8()); //get json from str.
         QJsonObject ResponseObject = jsonResponse.object();                      //get json obj
 
@@ -1065,7 +1065,7 @@ void tradingDialog::on_AdvancedView_stateChanged(int arg1)
     }
 }
 
-void tradingDialog::on_UnitsInputPIV_textChanged(const QString& arg1)
+void tradingDialog::on_UnitsInputSTLL_textChanged(const QString& arg1)
 {
     CalculateSellCostLabel(); //update cost
 }

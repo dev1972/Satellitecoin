@@ -74,10 +74,10 @@ static const char UNUSED* stll_strings[] = {
                                    "Execute command when the best block changes (%s in cmd is replaced by block "
                                    "hash)"),
     QT_TRANSLATE_NOOP("stll-core", ""
-                                   "Fees (in PIV/Kb) smaller than this are considered zero fee for relaying "
+                                   "Fees (in STLL/Kb) smaller than this are considered zero fee for relaying "
                                    "(default: %s)"),
     QT_TRANSLATE_NOOP("stll-core", ""
-                                   "Fees (in PIV/Kb) smaller than this are considered zero fee for transaction "
+                                   "Fees (in STLL/Kb) smaller than this are considered zero fee for transaction "
                                    "creation (default: %s)"),
     QT_TRANSLATE_NOOP("stll-core", ""
                                    "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -167,10 +167,10 @@ static const char UNUSED* stll_strings[] = {
                                    "Unable to locate enough Obfuscation denominated funds for this transaction."),
     QT_TRANSLATE_NOOP("stll-core", ""
                                    "Unable to locate enough Obfuscation non-denominated funds for this "
-                                   "transaction that are not equal 10000 PIV."),
+                                   "transaction that are not equal 10000 STLL."),
     QT_TRANSLATE_NOOP("stll-core", ""
                                    "Unable to locate enough funds for this transaction that are not equal 10000 "
-                                   "PIV."),
+                                   "STLL."),
     QT_TRANSLATE_NOOP("stll-core", ""
                                    "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
                                    "%s)"),
@@ -267,7 +267,7 @@ static const char UNUSED* stll_strings[] = {
     QT_TRANSLATE_NOOP("stll-core", "Error: You already have pending entries in the Obfuscation pool"),
     QT_TRANSLATE_NOOP("stll-core", "Failed to listen on any port. Use -listen=0 if you want this."),
     QT_TRANSLATE_NOOP("stll-core", "Failed to read block"),
-    QT_TRANSLATE_NOOP("stll-core", "Fee (in PIV/kB) to add to transactions you send (default: %s)"),
+    QT_TRANSLATE_NOOP("stll-core", "Fee (in STLL/kB) to add to transactions you send (default: %s)"),
     QT_TRANSLATE_NOOP("stll-core", "Finalizing transaction."),
     QT_TRANSLATE_NOOP("stll-core", "Force safe mode (default: %u)"),
     QT_TRANSLATE_NOOP("stll-core", "Found enough users, signing ( waiting %s )"),
@@ -300,7 +300,7 @@ static const char UNUSED* stll_strings[] = {
     QT_TRANSLATE_NOOP("stll-core", "Invalid script detected."),
     QT_TRANSLATE_NOOP("stll-core", "KeePassHttp id for the established association"),
     QT_TRANSLATE_NOOP("stll-core", "KeePassHttp key for AES encrypted communication with KeePass"),
-    QT_TRANSLATE_NOOP("stll-core", "Keep N PIV anonymized (default: %u)"),
+    QT_TRANSLATE_NOOP("stll-core", "Keep N STLL anonymized (default: %u)"),
     QT_TRANSLATE_NOOP("stll-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
     QT_TRANSLATE_NOOP("stll-core", "Last Obfuscation was too recent."),
     QT_TRANSLATE_NOOP("stll-core", "Last successful Obfuscation action was too recent."),
