@@ -3,13 +3,13 @@ Description=STLL's distributed currency daemon
 After=network.target
 
 [Service]
-User=pivx
-Group=pivx
+User=stll
+Group=stll
 
 Type=forking
-PIDFile=/var/lib/pivxd/pivxd.pid
-ExecStart=/usr/bin/pivxd -daemon -pid=/var/lib/pivxd/pivxd.pid \
--conf=/etc/pivx/pivx.conf -datadir=/var/lib/pivxd
+PIDFile=/var/lib/stlld/stlld.pid
+ExecStart=/usr/bin/stlld -daemon -pid=/var/lib/stlld/stlld.pid \
+-conf=/etc/stll/stll.conf -datadir=/var/lib/stlld
 
 Restart=always
 PrivateTmp=true

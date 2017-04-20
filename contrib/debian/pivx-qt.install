@@ -1,6 +1,6 @@
-usr/local/bin/pivx-qt usr/bin
+usr/local/bin/stll-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin16.xpm usr/share/pixmaps
 share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/pivx-qt.desktop usr/share/applications
-debian/pivx-qt.protocol usr/share/kde4/services/
+debian/stll-qt.desktop usr/share/applications
+debian/stll-qt.protocol usr/share/kde4/services/
