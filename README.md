@@ -29,7 +29,7 @@
 
 <table>
 <th>Block Height</th><th>Masternodes</th><th>Miner</th><th>development support</th>
-<tr><td>2-432000</td><td>20% (50 STLL)</td><td>80% (200 STLL)</td><td>0</td></tr>
+<tr><td>2-43200</td><td>20% (50 STLL)</td><td>80% (200 STLL)</td><td>0</td></tr>
 <tr><td>43201-151200</td><td>20% (50 STLL)</td><td>70% (200 STLL)</td><td>10% (25 STLL)</td></tr>
 <tr><td>151201-259200</td><td>45% (22.5 STLL)</td><td>45% (22.5 STLL)</td><td>10% (5 STLL)</td></tr>
 </table>
