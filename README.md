@@ -18,7 +18,7 @@
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>45,000 STLL</td><td>Premine</td><td>0 Days</td></tr>
-<tr><td>2-151200</td><td>250 STLL</td><td rowspan=2>Open Mining</td><td rowspan=2> Approx 180 Days</td></tr>
+<tr><td>2-151200</td><td>250 STLL</td><td rowspan=2>Open Mining</td><td rowspan=2> Approx 90 Days</td></tr>
 <tr><td>151201-259200</td><td>50 STLL</td></tr>
 <tr><th colspan=4>PoS Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
