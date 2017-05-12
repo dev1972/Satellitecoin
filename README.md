@@ -2,9 +2,9 @@
 
 ### Coin Specs
 <table>
-<tr><td>Algo</td><td>Quark</td></tr>
-<tr><td>Block Time</td><td>60 Seconds</td></tr>
-<tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
+<tr><td>Algorithm</td><td>Quark</td></tr>
+<tr><td>Block Time</td><td>30 Seconds</td></tr>
+<tr><td>Difficulty Retargeting</td><td>3 min</td></tr>
 <tr><td>Max Coin Supply (PoW Phase)</td><td>43,199,500 STLL</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>unlimited</td></tr>
 <tr><td>Premine</td><td>45,000 STLL*</td></tr>
