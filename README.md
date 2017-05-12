@@ -1,4 +1,4 @@
-<h2><strong>STLL version 1.0.0.0</strong></h2>
+<h2><strong>STLL version 1.0.0.1</strong></h2>
 <p></p>
 <h3><strong>Coin specs:</strong></h3>
 <p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
